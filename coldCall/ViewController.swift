@@ -11,15 +11,28 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    
     let nameBank: [String] = [
     "Chuck", "Rodrigo", "Pat", "Elva"
     ]
     
-    var random = Int(arc4random_uniform(UInt32(5)))
     
     @IBAction func coldCallButton(_ sender: UIButton) {
-        updateUI()
+        
+        let random = Int(arc4random_uniform(UInt32(4)))
+        let random2 = Int(arc4random_uniform(5)+1)
+        nameLabel.text = nameBank[random]
+        numberLabel.text = String(random2)
+        
+        if random2 <= 2{
+            numberLabel.textColor = UIColor.red
+        } else if random2 == 5{
+            numberLabel.textColor = UIColor.green
+        } else {
+            numberLabel.textColor = UIColor.orange
+        }
     }
     
     override func viewDidLoad() {
@@ -32,10 +45,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func updateUI(){
-        nameLabel.text = nameBank[random]
-        random = Int(arc4random_uniform(UInt32(4)))
-    }
+//    func updateUI(){
+//        nameLabel.text = nameBank[random]
+//        numberLabel.text = String(random2)
+//        random = Int(arc4random_uniform(UInt32(4)))
+//        random2 = Int(arc4random_uniform(5)+1)
+//    }
     
     
 }

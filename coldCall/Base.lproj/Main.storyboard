@@ -38,13 +38,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJY-DF-9qS">
+                                <rect key="frame" x="53" y="229" width="268" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="b66-8k-jiB"/>
+                                    <constraint firstAttribute="width" constant="268" id="udV-pe-Mgt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JXP-tt-4MY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="6Ji-v0-qNq"/>
                             <constraint firstItem="jkO-6R-RQB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="6Ue-G0-1NF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GJY-DF-9qS" secondAttribute="trailing" constant="54" id="8q1-ez-lu4"/>
+                            <constraint firstItem="GJY-DF-9qS" firstAttribute="top" secondItem="jkO-6R-RQB" secondAttribute="bottom" constant="87" id="Adq-hx-qL6"/>
                             <constraint firstItem="jkO-6R-RQB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="CFf-op-vwh"/>
+                            <constraint firstItem="JXP-tt-4MY" firstAttribute="top" secondItem="GJY-DF-9qS" secondAttribute="bottom" constant="161" id="DT4-OH-wnA"/>
                             <constraint firstItem="jkO-6R-RQB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EjC-2b-ty7"/>
+                            <constraint firstItem="GJY-DF-9qS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="Eom-gv-GT0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JXP-tt-4MY" secondAttribute="bottom" constant="91" id="G13-q8-ret"/>
                             <constraint firstItem="JXP-tt-4MY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RIT-q9-xpJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jkO-6R-RQB" secondAttribute="trailing" constant="75" id="jhe-0f-cIJ"/>
@@ -55,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="jkO-6R-RQB" id="xka-yz-pA8"/>
+                        <outlet property="numberLabel" destination="GJY-DF-9qS" id="eM2-Tj-Ss1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
